@@ -7,6 +7,7 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Тесты профподготовки</title>
 </head>
@@ -15,87 +16,49 @@
 	<div class="wrapper">
 		<div class="quiz">
 			<div class="container">
+				<header class="header">
+					<div class="header__body">
+						<div class="header__profile-image">
+							<a href="#"><img src="img/ava.png" alt=""></a>
+						</div>
+						<a href="#" class="header__logo">
+							test.fi.ru
+						</a>
+						<div class="header__burger">
+							<span></span>
+						</div>
+						<nav class="header__menu">
+							<ul class="header__list">
+								<li>
+									<a href="#" class="header__link"></a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</header>
 				<div class="quiz__body">
 					<aside class="aside">
 						<div class="aside__body">
 							<div class="aside__title">
-								<a href="#">test.fi.ru</a>
+								<a href="#">
+									<span>test <br> fi.ru</span>
+									<span>test.fi.ru</span>
+								</a>
 							</div>
 							<nav class="aside__menu">
 								<ul class="aside__list">
 									<li class="chosen">
-										<a href="#" class="aside__link">Тесты</a>
+										<a href="#" class="aside__link aside__link-test"><span>Тесты</span></a>
 									</li>
 									<li>
-										<a href="#" class="aside__link">Список группы</a>
+										<a href="#" class="aside__link aside__link-list"><span>Список группы</span></a>
 									</li>
 									<li>
-										<a href="#" class="aside__link">О компании</a>
+										<a href="#" class="aside__link aside__link-company"><span>О компании</span></a>
 									</li>
 								</ul>
 							</nav>
 							<div class="aside__hide"><span></span></div>
-						</div>
-						<div class="aside__profile">
-							<div class="profile__technical">
-								<div class="profile__star">
-									<a href="#">4,6</a>
-								</div>
-								<div class="profile__quit">
-									<a href="#"><img src="img/icons/quit.svg" alt=""></a>
-								</div>
-							</div>
-							<div class="profile__image">
-								<a href="#"><img src="img/ava.png" alt=""></a>
-							</div>
-							<img class="decor" src="img/icons/decor.svg" alt="">
-							<div class="profile__name">
-								Смирнова Екатерина
-							</div>
-							<div class="profile__position">
-								Инженер по охране труда
-							</div>
-							<div class="profile__tests-done">
-								Выполненные тесты
-							</div>
-							<div class="profile__finished-tests">
-								<div class="done-test">
-									<div class="test-info">
-										<div class="test-description">
-											Первая помощь
-										</div>
-										<div class="test-percentage">46%</div>
-									</div>
-									<div class="test-bar"><span></span></div>
-									<div class="test-button-container">
-										<a href="#" class="repeat-button">Пройти повторно</a>
-									</div>
-								</div>
-								<div class="done-test">
-									<div class="test-info">
-										<div class="test-description">
-											Обучение в области гражданской обороны и защиты от черезвычайных ситуаций
-										</div>
-										<div class="test-percentage">30%</div>
-									</div>
-									<div class="test-bar"><span class="span30"></span></div>
-									<div class="test-button-container">
-										<a href="#" class="repeat-button">Пройти повторно</a>
-									</div>
-								</div>
-								<div class="done-test">
-									<div class="test-info">
-										<div class="test-description">
-											Контрактная система в сфере закупок товаров, работ, услуг для обеспечения государтсвенных и муниципальных нужд
-										</div>
-										<div class="test-percentage">99%</div>
-									</div>
-									<div class="test-bar"><span class="span99"></span></div>
-									<div class="test-button-container">
-										<a href="#" class="repeat-button">Пройти повторно</a>
-									</div>
-								</div>
-							</div>
 						</div>
 					</aside>
 					<div class="main">
@@ -104,12 +67,11 @@
 						</h1>
 						<div class="main__filter">
 							<div class="filter-button pressed">Все</div>
-							<div class="filter-button">Непройденные</div>
-							<div class="filter-button">Медицинские</div>
+							<div class="filter-button">Промышленная безопасность</div>
 						</div>
-						<div class="main__subtitle subtitle">
-							Тесты определенного направления
-						</div>
+						<form action="#" class="main__form">
+							<input class="main__search" type="text" name="search" value="">
+						</form>
 						<div class="main__tests">
 							<div class="main__card">
 								<div class="card-title">
@@ -119,7 +81,7 @@
 									<img src="img/icons/firefighter1.svg" alt="">
 								</div>
 								<div class="card-buttons">
-									<a href="#" class="learn-button">Модуль изучения</a>
+									<a href="#" class="learn-button">Скачать материал</a>
 									<a href="test.html" class="test-button">Тестирование</a>
 								</div>
 							</div>
@@ -130,7 +92,7 @@
 									<img src="img/icons/firefighter2.svg" alt="">
 								</div>
 								<div class="card-buttons">
-									<a href="#" class="learn-button">Модуль изучения</a>
+									<a href="#" class="learn-button">Скачать материал</a>
 									<a href="test.html" class="test-button">Тестирование</a>
 								</div>
 							</div>
@@ -141,7 +103,7 @@
 									<img src="img/icons/electrician.svg" alt="">
 								</div>
 								<div class="card-buttons">
-									<a href="#" class="learn-button">Модуль изучения</a>
+									<a href="#" class="learn-button">Скачать материал</a>
 									<a href="test.html" class="test-button">Тестирование</a>
 								</div>
 							</div>
@@ -153,7 +115,7 @@
 									<img src="img/icons/safetyguy.svg" alt="">
 								</div>
 								<div class="card-buttons">
-									<a href="#" class="learn-button">Модуль изучения</a>
+									<a href="#" class="learn-button">Скачать материал</a>
 									<a href="test.html" class="test-button">Тестирование</a>
 								</div>
 							</div>
@@ -165,7 +127,7 @@
 									<img src="img/icons/medic.svg" alt="">
 								</div>
 								<div class="card-buttons">
-									<a href="#" class="learn-button">Модуль изучения</a>
+									<a href="#" class="learn-button">Скачать материал</a>
 									<a href="test.html" class="test-button">Тестирование</a>
 								</div>
 							</div>
@@ -177,7 +139,7 @@
 									<img src="img/icons/chemist.svg" alt="">
 								</div>
 								<div class="card-buttons">
-									<a href="#" class="learn-button">Модуль изучения</a>
+									<a href="#" class="learn-button">Скачать материал</a>
 									<a href="test.html" class="test-button">Тестирование</a>
 								</div>
 							</div>
@@ -189,22 +151,64 @@
 									<img src="img/icons/lady.svg" alt="">
 								</div>
 								<div class="card-buttons">
-									<a href="#" class="learn-button">Модуль изучения</a>
+									<a href="#" class="learn-button">Скачать материал</a>
 									<a href="test.html" class="test-button">Тестирование</a>
 								</div>
 							</div>
 							<div class="main__card">
 								<div class="card-title">
-									Высотные работы. Без чего нельзя обойтись? 
+									Высотные работы. Без чего нельзя обойтись?
 								</div>
 								<div class="card-image">
 									<img src="img/icons/painter.svg" alt="">
 								</div>
 								<div class="card-buttons">
-									<a href="#" class="learn-button">Модуль изучения</a>
+									<a href="#" class="learn-button">Скачать материал</a>
 									<a href="test.html" class="test-button">Тестирование</a>
 								</div>
 							</div>
+							<div class="main__card">
+								<div class="card-title">
+									Общехозяйственная экология
+								</div>
+								<div class="card-image">
+									<img src="img/icons/ecology.svg" alt="">
+								</div>
+								<div class="card-buttons">
+									<a href="#" class="learn-button">Скачать материал</a>
+									<a href="test.html" class="test-button">Тестирование</a>
+								</div>
+							</div>
+							<div class="main__card">
+								<div class="card-title">
+									Профилактика коронавируса
+								</div>
+								<div class="card-image">
+									<img src="img/icons/corona.svg" alt="">
+								</div>
+								<div class="card-buttons">
+									<a href="#" class="learn-button">Скачать материал</a>
+									<a href="test.html" class="test-button">Тестирование</a>
+								</div>
+							</div>
+							<div class="main__card">
+								<div class="card-title">
+									Организация закупок товаров, работ, услуг отдельными видами юридических
+									лиц<br>N223-ФЗ от 18.07.2011 г
+								</div>
+								<div class="card-image">
+									<img src="img/icons/buy.svg" alt="">
+								</div>
+								<div class="card-buttons">
+									<a href="#" class="learn-button">Скачать материал</a>
+									<a href="test.html" class="test-button">Тестирование</a>
+								</div>
+							</div>
+							<a href="#" class="main__card main__card-folder">
+								<div class="card-title">
+									Промышленная безопасность
+								</div>
+							</a>
 						</div>
 					</div>
 					<div class="profile">
@@ -257,7 +261,8 @@
 							<div class="done-test">
 								<div class="test-info">
 									<div class="test-description">
-										Контрактная система в сфере закупок товаров, работ, услуг для обеспечения государтсвенных и муниципальных нужд
+										Контрактная система в сфере закупок товаров, работ, услуг для обеспечения
+										государтсвенных и муниципальных нужд
 									</div>
 									<div class="test-percentage">99%</div>
 								</div>
@@ -269,6 +274,11 @@
 						</div>
 					</div>
 				</div>
+				<footer class="footer">
+					<div class="footer__text">
+						© test.fi.ru 2020. Федеральный институт повышения квалификации. Все права защищены.
+					</div>
+				</footer>
 			</div>
 		</div>
 	</div>
