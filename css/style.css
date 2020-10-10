@@ -575,10 +575,18 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .title {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .title {
+    font-size: 28px;
+    line-height: 30px;
   }
 }
 
@@ -662,6 +670,14 @@ body {
       flex-wrap: wrap;
 }
 
+@media (max-width: 767px) {
+  .main__tests {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .main__card {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 318px;
@@ -706,16 +722,36 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .main__card {
+    min-height: 195px;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 200px;
-            flex: 0 0 200px;
+        -ms-flex: 0 0 335px;
+            flex: 0 0 335px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .main__card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 335px;
+            flex: 1 1 335px;
+    margin: 0px 0px 20px 0;
+  }
+  .main__card:nth-child(odd) {
+    margin: 0px 0px 20px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .main__card {
+    min-height: 230px;
   }
 }
 
 .main__card-folder {
-  background: url("../img/icons/safety.png") bottom no-repeat, #fff;
+  background: url("../img/icons/safety.png") bottom/100% no-repeat, #fff;
 }
 
 .card-image {
@@ -746,6 +782,14 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .card-image {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+}
+
 .card-title {
   font-weight: 500;
   font-size: 18px;
@@ -766,10 +810,18 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
+  .card-title {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 360px) {
   .card-title {
     font-size: 14px;
-    line-height: 14px;
+    max-width: 180px;
   }
 }
 
@@ -786,6 +838,24 @@ body {
 }
 
 @media (max-width: 992px) {
+  .card-buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (max-width: 360px) {
   .card-buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -816,6 +886,19 @@ body {
     margin-top: 10px;
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .learn-button {
+    margin: 0 10px 0 0;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .learn-button {
+    margin: 10px 0px 0 0;
   }
 }
 
