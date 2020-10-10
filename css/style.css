@@ -306,6 +306,19 @@ body {
   display: block;
 }
 
+.header__profile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .header__profile {
+    display: block;
+    position: relative;
+    z-index: 2;
+    overflow: auto;
+  }
+}
+
 .container {
   max-width: 1152px;
   margin: 0 auto;
@@ -323,6 +336,7 @@ body {
 @media (max-width: 767px) {
   .quiz__body {
     margin-top: 58px;
+    display: none;
   }
 }
 
@@ -837,14 +851,9 @@ body {
 
 @media (max-width: 767px) {
   .decor {
-    top: 20px;
-    left: 102px;
-  }
-}
-
-@media (max-width: 520px) {
-  .decor {
-    display: none;
+    left: 50%;
+    -webkit-transform: translate(-3px);
+            transform: translate(-3px);
   }
 }
 
@@ -865,6 +874,14 @@ body {
   visibility: hidden;
   -webkit-transform: scale(0);
           transform: scale(0);
+}
+
+@media (max-width: 767px) {
+  .profile__info-bg {
+    background: #F1FAF6;
+    padding: 20px 20px 15px 20px;
+    margin-bottom: 10px;
+  }
 }
 
 .profile__star {
@@ -930,6 +947,12 @@ body {
   height: 37px;
 }
 
+@media (max-width: 767px) {
+  .profile__image {
+    margin: 0 auto 10px auto;
+  }
+}
+
 .profile__name {
   font-weight: 500;
   line-height: 21px;
@@ -965,6 +988,12 @@ body {
           transform: scale(0);
 }
 
+@media (max-width: 767px) {
+  .profile__position {
+    margin-bottom: 0;
+  }
+}
+
 .profile__tests-done {
   font-weight: 500;
   line-height: 21px;
@@ -982,6 +1011,12 @@ body {
           transform: scale(0);
 }
 
+@media (max-width: 767px) {
+  .profile__tests-done {
+    text-align: center;
+  }
+}
+
 .profile__finished-tests {
   background: #f1faf6;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -997,6 +1032,12 @@ body {
   visibility: hidden;
   -webkit-transform: scale(0);
           transform: scale(0);
+}
+
+@media (max-width: 767px) {
+  .profile__finished-tests {
+    margin: 0 20px 20px 20px;
+  }
 }
 
 .done-test {
@@ -1018,6 +1059,12 @@ body {
   line-height: 21px;
   letter-spacing: 0.1px;
   color: #6d6d6d;
+}
+
+@media (max-width: 767px) {
+  .test-description {
+    margin-right: 10px;
+  }
 }
 
 .test-percentage {
