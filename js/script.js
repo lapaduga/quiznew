@@ -30,4 +30,14 @@ $(document).ready(function () {
 		$(this).toggleClass('active');
 		return false;
 	});
+
+	//popup
+	$('.profile__quit').click(function (event) {
+		$('.popup').addClass('open');
+		$('body').addClass('lock');
+	});
+	$('.popup__cancel, .popup__yes, .popup__close-area').click(function (event) {
+		$('.popup').removeClass('open');
+		$('body').removeClass('lock');
+	});
 });

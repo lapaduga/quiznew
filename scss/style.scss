@@ -6,10 +6,8 @@ body {
 	height: 100%;
 }
 body {
-	@media (max-width: 767px) {
-		&.lock {
-			overflow: hidden;
-		}
+	&.lock {
+		overflow: hidden;
 	}
 }
 .wrapper {
@@ -394,7 +392,7 @@ body {
 		line-height: 40px;
 		margin-bottom: 16px;
 	}
-	@media (max-width: 360px){
+	@media (max-width: 360px) {
 		font-size: 28px;
 		line-height: 30px;
 	}
@@ -1157,18 +1155,99 @@ body {
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.4);
+	top: 0;
+	left: 0;
+	z-index: 51;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s;
+	&.open {
+		opacity: 1;
+		visibility: visible;
+		.popup__content {
+			transform: translate(0, 0) perspective(600px) rotateX(0deg);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 }
 .popup__body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 10px;
 }
 .popup__content {
+	background-color: #fff;
+	height: 104px;
+	width: 270px;
+	border-radius: 13px;
+	transform: translate(0, -100%) perspective(600px) rotateX(45deg);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s ease 0s;
 }
-.popup__close {
+.popup__close-area {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	cursor: pointer;
 }
 .popup__title {
+	font-size: 17px;
+	line-height: 20px;
+	letter-spacing: -0.024em;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 56px;
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: #c8c7cc;
+	}
 }
 .popup__answers {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #007aff;
+		font-weight: 600;
+		font-size: 17px;
+		line-height: 22px;
+		letter-spacing: -0.024em;
+		flex: 1 1 50%;
+		height: 48px;
+	}
 }
 .popup__cancel {
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		height: 100%;
+		width: 1px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: #c8c7cc;
+	}
 }
 .popup__yes {
 }
