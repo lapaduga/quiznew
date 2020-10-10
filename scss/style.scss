@@ -1149,3 +1149,26 @@ body {
 		display: block;
 	}
 }
+
+//popup
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+}
+.popup__body {
+}
+.popup__content {
+}
+.popup__close {
+}
+.popup__title {
+}
+.popup__answers {
+}
+.popup__cancel {
+}
+.popup__yes {
+}
