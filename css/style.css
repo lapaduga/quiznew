@@ -91,6 +91,221 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+@media (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+}
+
+.header {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .header {
+    display: block;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+  }
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.header__body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 58px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+
+.header__profile-image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30px;
+          flex: 0 0 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__profile-image img {
+  max-width: 100%;
+  display: block;
+}
+
+.header__logo {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 21px;
+  letter-spacing: 0.1px;
+  color: #58a193;
+  position: relative;
+  z-index: 3;
+}
+
+.header__burger {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .header__burger {
+    display: block;
+    position: relative;
+    z-index: 5;
+    width: 24px;
+    height: 17px;
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: #58a193;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 7px;
+    border-radius: 2px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before, .header__burger:after {
+    content: "";
+    background-color: #58a193;
+    border-radius: 2px;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+  .header__burger.active:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 7px;
+  }
+  .header__burger.active:after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 7px;
+  }
+  .header__burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+.header__menu-bg {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .header__menu-bg {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 130vw;
+    height: 130vh;
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    z-index: 3;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .header__menu-bg.active {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+}
+
+.close-menu-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header__menu {
+  display: none;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 767px) {
+  .header__menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    padding: 67px 0 0 20px;
+    z-index: 4;
+    overflow: auto;
+  }
+  .header__menu.active {
+    right: 0;
+  }
+}
+
+.header__list {
+  position: relative;
+  z-index: 2;
+}
+
+.header__list li {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin-bottom: 22px;
+  opacity: 0.5;
+}
+
+.header__list li.chosen {
+  opacity: 1;
+}
+
+.header__link {
+  padding: 0 0 0 36px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.1px;
+  color: #58a193;
+  display: block;
+}
+
 .container {
   max-width: 1152px;
   margin: 0 auto;
@@ -103,6 +318,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .quiz__body {
+    margin-top: 58px;
+  }
 }
 
 .aside {
