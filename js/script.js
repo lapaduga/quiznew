@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 	//header__profile
 	$('.header__profile-image').click(function (event) {
-		$('.quiz__body, .header__profile, .footer').toggleClass('show');
+		$('.quiz__body, .header__profile, .footer, .header__profile-image').toggleClass('show');
 	});
 
 	//checkbox
