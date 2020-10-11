@@ -7,6 +7,7 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Тесты профподготовки</title>
 </head>
@@ -15,163 +16,242 @@
 	<div class="wrapper">
 		<div class="quiz">
 			<div class="container">
-				<div class="quiz__body">
+				<header class="header">
+					<div class="header__body">
+						<div class="header__profile-image">
+							<a href="#"><img src="img/ava.png" alt=""></a>
+						</div>
+						<a href="#" class="header__logo">
+							test.fi.ru
+						</a>
+						<div class="header__burger">
+							<span></span>
+						</div>
+						<div class="header__menu-bg">
+							<div class="close-menu-area"></div>
+							<nav class="header__menu">
+								<ul class="header__list">
+									<li class="chosen">
+										<a href="#" class="header__link aside__link-test">Тесты</a>
+									</li>
+									<li>
+										<a href="#" class="header__link aside__link-list">Список группы</a>
+									</li>
+									<li>
+										<a href="#" class="header__link aside__link-company">О компании</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</header>
+				<div class="header__profile">
+					<div class="profile__info-bg">
+						<div class="profile__technical">
+							<div class="profile__quit">
+								<a href="#"><img src="img/icons/quit.svg" alt=""></a>
+							</div>
+							<div class="profile__star">
+								<a href="#">4,6</a>
+							</div>
+						</div>
+						<div class="profile__image">
+							<a href="#"><img src="img/ava.png" alt=""></a>
+						</div>
+						<div class="profile__name">
+							Смирнова Екатерина
+						</div>
+						<div class="profile__position">
+							Инженер по охране труда
+						</div>
+					</div>
+					<img class="decor" src="img/icons/decor.svg" alt="">
+					<div class="profile__tests-done">
+						Выполненные тесты
+					</div>
+					<div class="profile__finished-tests">
+						<div class="done-test">
+							<div class="test-info">
+								<div class="test-description">
+									Первая помощь
+								</div>
+								<div class="test-percentage">46%</div>
+							</div>
+							<div class="test-bar"><span></span></div>
+							<div class="test-button-container">
+								<a href="#" class="repeat-button">Пройти повторно</a>
+							</div>
+						</div>
+						<div class="done-test">
+							<div class="test-info">
+								<div class="test-description">
+									Обучение в области гражданской обороны и защиты от черезвычайных ситуаций
+								</div>
+								<div class="test-percentage">30%</div>
+							</div>
+							<div class="test-bar"><span class="span30"></span></div>
+							<div class="test-button-container">
+								<a href="#" class="repeat-button">Пройти повторно</a>
+							</div>
+						</div>
+						<div class="done-test">
+							<div class="test-info">
+								<div class="test-description">
+									Контрактная система в сфере закупок товаров, работ, услуг для обеспечения
+									государтсвенных и муниципальных нужд
+								</div>
+								<div class="test-percentage">99%</div>
+							</div>
+							<div class="test-bar"><span class="span99"></span></div>
+							<div class="test-button-container">
+								<a href="#" class="repeat-button">Пройти повторно</a>
+							</div>
+						</div>
+					</div>
+					<div class="profile__footer">
+						<div class="footer__text">
+							© test.fi.ru 2020. Федеральный институт повышения квалификации. Все права защищены.
+						</div>
+					</div>
+				</div>
+				<div class="quiz__body quiz__body-test">
 					<aside class="aside">
 						<div class="aside__body">
 							<div class="aside__title">
-								<a href="#">test.fi.ru</a>
+								<a href="#">
+									<span>test <br> fi.ru</span>
+									<span>test.fi.ru</span>
+								</a>
 							</div>
 							<nav class="aside__menu">
 								<ul class="aside__list">
 									<li class="chosen">
-										<a href="#" class="aside__link">Тесты</a>
+										<a href="#" class="aside__link aside__link-test"><span>Тесты</span></a>
 									</li>
 									<li>
-										<a href="#" class="aside__link">Список группы</a>
+										<a href="#" class="aside__link aside__link-list"><span>Список группы</span></a>
 									</li>
 									<li>
-										<a href="#" class="aside__link">О компании</a>
+										<a href="#" class="aside__link aside__link-company"><span>О компании</span></a>
 									</li>
 								</ul>
 							</nav>
 							<div class="aside__hide"><span></span></div>
 						</div>
-						<div class="aside__profile">
-							<div class="profile__technical">
-								<div class="profile__star">
-									<a href="#">4,6</a>
-								</div>
-								<div class="profile__quit">
-									<a href="#"><img src="img/icons/quit.svg" alt=""></a>
-								</div>
-							</div>
-							<div class="profile__image">
-								<a href="#"><img src="img/ava.png" alt=""></a>
-							</div>
-							<img class="decor" src="img/icons/decor.svg" alt="">
-							<div class="profile__name">
-								Смирнова Екатерина
-							</div>
-							<div class="profile__position">
-								Инженер по охране труда
-							</div>
-							<div class="profile__tests-done">
-								Выполненные тесты
-							</div>
-							<div class="profile__finished-tests">
-								<div class="done-test">
-									<div class="test-info">
-										<div class="test-description">
-											Первая помощь
-										</div>
-										<div class="test-percentage">46%</div>
-									</div>
-									<div class="test-bar"><span></span></div>
-									<div class="test-button-container">
-										<a href="#" class="repeat-button">Пройти повторно</a>
-									</div>
-								</div>
-								<div class="done-test">
-									<div class="test-info">
-										<div class="test-description">
-											Обучение в области гражданской обороны и защиты от черезвычайных ситуаций
-										</div>
-										<div class="test-percentage">30%</div>
-									</div>
-									<div class="test-bar"><span class="span30"></span></div>
-									<div class="test-button-container">
-										<a href="#" class="repeat-button">Пройти повторно</a>
-									</div>
-								</div>
-								<div class="done-test">
-									<div class="test-info">
-										<div class="test-description">
-											Контрактная система в сфере закупок товаров, работ, услуг для обеспечения
-											государтсвенных и муниципальных нужд
-										</div>
-										<div class="test-percentage">99%</div>
-									</div>
-									<div class="test-bar"><span class="span99"></span></div>
-									<div class="test-button-container">
-										<a href="#" class="repeat-button">Пройти повторно</a>
-									</div>
-								</div>
-							</div>
-						</div>
 					</aside>
 					<div class="main test__main">
-						<h1 class="test__title title">
+						<div class="main__profile">
+							<div class="main__profile-desc">
+								Выйти из профиля
+							</div>
+							<div class="main__profile-image">
+								<a href="#">
+									<img src="img/ava.png" alt="">
+								</a>
+							</div>
+						</div>
+						<h1 class="main__title title">
 							Основы энергосбережения
 						</h1>
 						<div class="test__questions">
 							<ul class="test__list">
-								<li class="answered">
-									<a href="#" class="test__link">Вопрос 1</a>
-								</li>
-								<li class="current">
-									<a href="#" class="test__link">Вопрос 2</a>
-								</li>
-								<li>
-									<a href="#" class="test__link">Вопрос 3</a>
-								</li>
-								<li>
-									<a href="#" class="test__link">Вопрос 4</a>
-								</li>
-								<li>
-									<a href="#" class="test__link">Вопрос 5</a>
-								</li>
-								<li>
-									<a href="#" class="test__link">Вопрос 6</a>
-								</li>
-								<li>
-									<a href="#" class="test__link">Вопрос 7</a>
-								</li>
-								<li>
-									<a href="#" class="test__link">Вопрос 8</a>
-								</li>
-								<li>
-									<a href="#" class="test__link">Вопрос 9</a>
-								</li>
-								<li>
-									<a href="#" class="test__link">Вопрос 10</a>
-								</li>
+								<a href="#" class="test__link">
+									<li class="answered">1</li>
+								</a>
+								<a href="#" class="test__link">
+									<li class="skip">2</li>
+								</a>
+								<a href="#" class="test__link">
+									<li class="answered">3</li>
+								</a>
+								<a href="#" class="test__link">
+									<li class="current">4</li>
+								</a>
+								<a href="#" class="test__link">
+									<li>5</li>
+								</a>
+								<a href="#" class="test__link">
+									<li>6</li>
+								</a>
+								<a href="#" class="test__link">
+									<li>7</li>
+								</a>
+								<a href="#" class="test__link">
+									<li>8</li>
+								</a>
+								<a href="#" class="test__link">
+									<li>9</li>
+								</a>
+								<a href="#" class="test__link">
+									<li>10</li>
+								</a>
 							</ul>
+						</div>
+						<div class="test__legend">
+							<div class="legend-item answered">Пройдено</div>
+							<div class="legend-item skip">Пропущено</div>
+							<div class="legend-item current">Текущий вопрос</div>
 						</div>
 						<div class="test__board">
 							<div class="test__canvas">
-								<div class="test__question">
-									Какие из перечисленных документов оформляются по результатам обязательных
-									энергетических обследований?
-								</div>
 								<form action="#" class="test__form">
-									<div class="test__form-options">
-										<div class="test__form-option">
-											<input type="checkbox" name="option-1">
-											Энергетический паспорт
+									<div class="test__form-main-block">
+										<div class="test__question">
+											Какие из перечисленных документов оформляются по результатам обязательных
+											энергетических обследований?
+											<div class="test__image-mobile">
+												<img src="img/test/help.png" alt="">
+											</div>
 										</div>
-										<div class="test__form-option">
-											<input type="checkbox" name="option-2">
-											Экологический паспорт объекта
+										<div class="test__notice">
+											! Несколько вариантов ответа
 										</div>
-										<div class="test__form-option">
-											<input type="checkbox" name="option-3">
-											Отчет о проведении энергетического обследования
+										<div class="test__form-options">
+											<div class="test__form-option">
+												<input type="checkbox" name="option-1">
+												Энергетический паспорт
+											</div>
+											<div class="test__form-option">
+												<input type="checkbox" name="option-2">
+												Экологический паспорт объекта
+											</div>
+											<div class="test__form-option">
+												<input type="checkbox" name="option-3">
+												Отчет о проведении энергетического обследования
+											</div>
+											<div class="test__form-option">
+												<input checked type="checkbox" name="option-4">
+												Инвентаризационная ведомость объектов энергохозяйства; сертификат о
+												включении предприяитя в Реестр организаций, допущеных к проведению
+												энергетических обследований
+											</div>
 										</div>
-										<div class="test__form-option">
-											<input type="checkbox" name="option-4">
-											Инвентаризационная ведомость объектов энергохозяйства; сертификат о
-											включении предприяитя в Реестр организаций, допущеных к проведению
-											энергетических обследований
+										<div class="test__form-interact">
+											<button class="answer-button" type="submit">Ответить</button>
+											<a href="#" class="skip-button">Пропустить</a>
 										</div>
 									</div>
-									<div class="test__form-interact">
-										<button class="answer" type="submit">Ответить</button>
-										<select name="chage-answer">
-											<option selected value="quest1">Заменить вопрос</option>
-											<option value="quest2">Еще вопрос</option>
-											<option value="quest3">Вопрос</option>
-											<option value="quest4">Ответ</option>
-										</select>
+									<div class="test__form-reaction">
+										<div class="reaction-title">
+											Оценить вопрос
+										</div>
+										<div class="reaction-body">
+											<div class="smile-item">
+												<img src="img/test/boring.png" alt="">
+												<input type="radio" value="1" name="smile">
+												Скучно
+											</div>
+											<div class="smile-item">
+												<img src="img/test/hard.png" alt="">
+												<input type="radio" value="2" name="smile">
+												Сложно
+											</div>
+											<div class="smile-item">
+												<img src="img/test/like.png" alt="">
+												<input checked type="radio" value="3" name="smile">
+												Нравится
+											</div>
+										</div>
 									</div>
 								</form>
 							</div>
@@ -185,72 +265,29 @@
 							</div>
 						</div>
 					</div>
-					<div class="profile">
-						<div class="profile__technical">
-							<div class="profile__star">
-								<a href="#">4,6</a>
-							</div>
-							<div class="profile__quit">
-								<a href="#"><img src="img/icons/quit.svg" alt=""></a>
-							</div>
-						</div>
-						<div class="profile__image">
-							<a href="#"><img src="img/ava.png" alt=""></a>
-						</div>
-						<img class="decor" src="img/icons/decor.svg" alt="">
-						<div class="profile__name">
-							Смирнова Екатерина
-						</div>
-						<div class="profile__position">
-							Инженер по охране труда
-						</div>
-						<div class="profile__tests-done">
-							Выполненные тесты
-						</div>
-						<div class="profile__finished-tests">
-							<div class="done-test">
-								<div class="test-info">
-									<div class="test-description">
-										Первая помощь
-									</div>
-									<div class="test-percentage">46%</div>
-								</div>
-								<div class="test-bar"><span></span></div>
-								<div class="test-button-container">
-									<a href="#" class="repeat-button">Пройти повторно</a>
-								</div>
-							</div>
-							<div class="done-test">
-								<div class="test-info">
-									<div class="test-description">
-										Обучение в области гражданской обороны и защиты от черезвычайных ситуаций
-									</div>
-									<div class="test-percentage">30%</div>
-								</div>
-								<div class="test-bar"><span class="span30"></span></div>
-								<div class="test-button-container">
-									<a href="#" class="repeat-button">Пройти повторно</a>
-								</div>
-							</div>
-							<div class="done-test">
-								<div class="test-info">
-									<div class="test-description">
-										Контрактная система в сфере закупок товаров, работ, услуг для обеспечения
-										государтсвенных и муниципальных нужд
-									</div>
-									<div class="test-percentage">99%</div>
-								</div>
-								<div class="test-bar"><span class="span99"></span></div>
-								<div class="test-button-container">
-									<a href="#" class="repeat-button">Пройти повторно</a>
-								</div>
-							</div>
-						</div>
+				</div>
+				<footer class="footer">
+					<div class="footer__text">
+						© test.fi.ru 2020. Федеральный институт повышения квалификации. Все права защищены.
 					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<div id="popup" class="popup">
+		<div class="popup__close-area"></div>
+		<div class="popup__body">
+			<div class="popup__content">
+				<div class="popup__title">Хотите выйти из профиля?</div>
+				<div class="popup__answers">
+					<a href="#" class="popup__cancel">Отмена</a>
+					<a href="#" class="popup__yes">Да</a>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="js/script.js"></script>
 </body>

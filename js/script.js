@@ -40,4 +40,26 @@ $(document).ready(function () {
 		$('.popup').removeClass('open');
 		$('body').removeClass('lock');
 	});
+
+	//profile image hover
+	$('.main__profile-image').on('mouseenter', function () {
+		$('.main__profile-desc').addClass('show');
+	});
+	$('.main__profile-image').on('mouseleave', function () {
+		$('.main__profile-desc').removeClass('show');
+	});
+
+	//reaction radiobuttons
+	$.each($('.smile-item'), function (index, val) {
+		if ($(this).find('input').prop('checked') == true) {
+			$(this).addClass('active');
+		}
+	});
+	$(document).on('click', '.smile-item', function (event) {
+		$(this).parents('.reaction-body').find('.smile-item').removeClass('active');
+		$(this).parents('.reaction-body').find('.smile-item input').prop('checked', false);
+		$(this).toggleClass('active');
+		$(this).find('input').prop('checked', true);
+		return false;
+	});
 });
