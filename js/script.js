@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	//aside menu
 	$('.aside__hide').click(function (event) {
-		$('.aside, .aside__hide, .aside__title, .aside__link, .main, .profile, .profile__image, .profile__technical, .decor, .profile__name, .profile__position, .profile__tests-done, .profile__finished-tests, .footer').toggleClass('passive');
+		$('.aside, .aside__hide, .aside__title, .aside__link, .main, .profile, .profile__image, .profile__technical, .decor, .profile__name, .profile__position, .profile__tests-done, .profile__finished-tests, .footer, .aside__contents').toggleClass('passive');
 	});
 
 	//header burger menu

@@ -397,11 +397,14 @@ body.lock {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
   .aside.passive {
     width: 60px;
+    overflow: hidden;
   }
 }
 
@@ -414,14 +417,20 @@ body.lock {
 .aside__menu {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  padding-top: 70px;
+}
+
+.aside__body {
+  position: relative;
 }
 
 .aside__hide {
   width: 40px;
   height: 90px;
-  position: relative;
-  top: 100px;
-  left: 160px;
+  position: fixed;
+  top: 250px;
+  -webkit-transform: translate(170px);
+          transform: translate(170px);
   cursor: pointer;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -440,7 +449,8 @@ body.lock {
 
 @media (min-width: 768px) {
   .aside__hide.passive {
-    left: 20px;
+    -webkit-transform: translate(20px);
+            transform: translate(20px);
   }
 }
 
@@ -448,6 +458,8 @@ body.lock {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   margin: 0 0 39px 39px;
+  position: fixed;
+  z-index: 50;
 }
 
 .aside__title a {
@@ -484,6 +496,18 @@ body.lock {
   .aside__title.passive span:first-child {
     display: block;
   }
+}
+
+.aside__title:before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  background-color: #fff;
+  display: block;
+  height: 100px;
+  width: 210px;
+  z-index: -1;
 }
 
 .aside__list li {
@@ -541,6 +565,49 @@ body.lock {
 
 .aside__link-company {
   background: url("../img/icons/company.svg") left no-repeat;
+}
+
+.aside__contents {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.aside__contents li {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .aside__contents.passive {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+.aside__contents-link {
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: #636464;
+  max-width: 167px;
+}
+
+.aside__contents-link.passed {
+  font-weight: 500;
+  line-height: 21px;
+  color: #58a193;
+}
+
+.aside__contents-link.current {
+  font-weight: 500;
+}
+
+.aside__contents-link:hover {
+  text-decoration: underline;
 }
 
 .main {
@@ -2197,14 +2264,14 @@ body.lock {
     margin-bottom: 15px;
   }
   .test__hint-title:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 1px;
-    background: #58A193;
+    background: #58a193;
   }
 }
 
