@@ -1583,7 +1583,7 @@ body.lock {
 
 @media (max-width: 550px) {
   .test__canvas {
-    padding: 10px;
+    padding: 15px;
   }
 }
 
@@ -1605,13 +1605,13 @@ body.lock {
 
 @media (max-width: 767px) {
   .test__question {
-    margin-right: 90px;
+    margin-right: 100px;
   }
 }
 
 @media (max-width: 360px) {
   .test__question {
-    margin-right: 40px;
+    margin-right: 50px;
   }
 }
 
@@ -1829,6 +1829,10 @@ body.lock {
   }
 }
 
+.finish-button {
+  margin: 0;
+}
+
 .test__image-block {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 133px;
@@ -2031,6 +2035,12 @@ body.lock {
 
 .test__form-main-block {
   margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .test__form-main-block {
+    margin-right: 0;
+  }
 }
 
 .test__hint {
