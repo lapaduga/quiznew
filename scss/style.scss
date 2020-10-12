@@ -412,6 +412,9 @@ body {
 		max-width: 100%;
 		display: block;
 	}
+	@media (max-width: 767px){
+		display: none;
+	}
 }
 .title {
 	font-weight: bold;
@@ -887,6 +890,15 @@ body {
 
 .test__main {
 	flex: 1 1 auto;
+	@media (max-width: 400px){
+		padding: 20px;
+	}
+}
+.main__title-test{
+	@media (max-width: 400px){
+		font-size: 24px;
+		text-align: center;
+	}
 }
 .quiz__body-test {
 	min-height: calc(100vh - 58px);
@@ -903,6 +915,7 @@ body {
 .test__list {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	flex-wrap: wrap;
 	li {
 		border-radius: 50%;
@@ -935,12 +948,22 @@ body {
 		@media (max-width: 992px) {
 			margin-top: 8px;
 		}
+		@media (max-width: 400px){
+			height: 30px;
+			width: 30px;
+			font-size: 14px;
+			margin: 3px 3px 0px 0px;
+		}
 	}
 }
 .test__legend {
 	display: flex;
 	align-items: center;
 	margin-bottom: 20px;
+	@media (max-width: 360px){
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 .legend-item {
 	font-size: 12px;
@@ -974,6 +997,12 @@ body {
 			background: #58a193;
 		}
 	}
+	@media (max-width: 400px){
+		padding: 0 10px 0 20px;
+	}
+	@media (max-width: 360px){
+		margin-top: 3px;
+	}
 }
 .test__board {
 	display: flex;
@@ -982,7 +1011,7 @@ body {
 	@media (max-width: 992px) {
 		flex-direction: column-reverse;
 	}
-	@media (max-width: 767px){
+	@media (max-width: 767px) {
 		display: block;
 	}
 }
@@ -1007,43 +1036,45 @@ body {
 		font-size: 14px;
 		margin-bottom: 10px;
 	}
-	@media (max-width: 767px){
-		display: flex;
-		justify-content: space-between;
+	@media (max-width: 767px) {
+		margin-right: 90px;
+	}
+	@media (max-width: 360px){
+		margin-right: 40px;
 	}
 }
-.test__image-mobile{
+.test__image-mobile {
 	display: none;
-	height: 100px;
-	width: 100px;
-	img{
+	img {
 		max-width: 100%;
 		position: relative;
 		top: 0;
 		left: 10px;
 	}
-	position: relative;
-	top: -20px;
-	left: 0px;
-	z-index: 0;
-	@media (max-width: 767px){
+	@media (max-width: 767px) {
+		position: absolute;
+		top: 0px;
+		right: -20px;
+		z-index: 0;
+		height: 100px;
+		width: 100px;
 		display: block;
 		&:before,
-		&:after{
-			content: '';
+		&:after {
+			content: "";
 			display: block;
 			position: absolute;
 		}
-		&:before{
+		&:before {
 			width: 100px;
 			height: 100px;
 			top: -12px;
 			left: -12px;
 			z-index: -2;
-			background: #F1FAF6;
-			border-radius: 50% 0% 50% 50%;
+			background: #f1faf6;
+			border-radius: 50%;
 		}
-		&:after{
+		&:after {
 			border-radius: 50%;
 			top: -3px;
 			left: -2px;
@@ -1054,6 +1085,25 @@ body {
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		}
 	}
+	@media (max-width: 400px){
+		top: -10px;
+		right: -30px;
+		&:before {
+			border-radius: 50% 0% 50% 50%;
+		}
+	}
+	@media (max-width: 360px){
+		height: 50px;
+		width: 50px;
+		top: 0;
+		right: 10px;
+		&:before {
+			display: none;
+		}
+		&:after {
+			display: none;
+		}
+	}
 }
 .test__notice {
 	font-size: 12px;
@@ -1061,14 +1111,12 @@ body {
 	letter-spacing: 0.1px;
 	color: rgba(94, 92, 92, 0.6);
 	margin-bottom: 22px;
-	@media (max-width: 767px){
-		margin-top: -60px;
-	}
 }
 .test__form {
 	display: flex;
-	@media (max-width: 767px){
+	@media (max-width: 767px) {
 		flex-direction: column;
+		position: relative;
 	}
 }
 .test__form-options {
@@ -1118,13 +1166,12 @@ body {
 	}
 }
 .test__form-interact {
-	@media (max-width: 767px){
+	@media (max-width: 767px) {
 		margin-bottom: 21px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
-
 }
 .answer-button {
 	line-height: 21px;
@@ -1154,7 +1201,7 @@ body {
 		background-color: #5790ad;
 		color: #fff;
 	}
-	@media (max-width: 767px){
+	@media (max-width: 767px) {
 		padding: 5px 12px;
 	}
 }
@@ -1213,8 +1260,8 @@ body {
 		height: 100%;
 		background: #58a193;
 	}
-	@media (max-width: 767px){
-		&:before{
+	@media (max-width: 767px) {
+		&:before {
 			display: none;
 		}
 	}
@@ -1227,27 +1274,27 @@ body {
 	color: #58a193;
 	margin-bottom: 24px;
 	position: relative;
-	@media (max-width: 767px){
+	@media (max-width: 767px) {
 		&:before,
-		&:after{
-			content: '';
+		&:after {
+			content: "";
 			position: absolute;
 			top: 7px;
 			height: 1px;
 			width: 100%;
-			background: #58A193;
+			background: #58a193;
 			display: block;
 		}
-		&:before{
+		&:before {
 			left: -110%;
 		}
-		&:after{
+		&:after {
 			left: 110%;
 		}
 	}
 }
 .reaction-body {
-	@media (max-width: 767px){
+	@media (max-width: 767px) {
 		display: flex;
 	}
 }
@@ -1285,7 +1332,7 @@ body {
 		box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.25);
 	}
 }
-.test__form-main-block{
+.test__form-main-block {
 	margin-right: 10px;
 }
 
