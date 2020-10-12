@@ -62,4 +62,9 @@ $(document).ready(function () {
 		$(this).find('input').prop('checked', true);
 		return false;
 	});
+
+	//hint
+	$('.test__help, .test__hint-close, .test__image-mobile').on('click', function () {
+		$('.test__board, .test__hint, .test__legend, .test__hint-aware-mobile').toggleClass('switch');
+	});
 });
