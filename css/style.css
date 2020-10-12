@@ -1648,6 +1648,12 @@ body.lock {
   padding: 25px;
 }
 
+@media (max-width: 767px) {
+  .test__canvas {
+    border-radius: 5px;
+  }
+}
+
 @media (max-width: 550px) {
   .test__canvas {
     padding: 15px;
@@ -1716,16 +1722,18 @@ body.lock {
   margin-bottom: 12px;
 }
 
-.test__module-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media (max-width: 767px) {
+  .test__module-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .test__question {
@@ -2975,4 +2983,83 @@ body.lock {
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+}
+
+.test__board-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.test__check-title {
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 0.1px;
+  color: #636464;
+  margin-bottom: 38px;
+}
+
+@media (max-width: 767px) {
+  .test__check-title {
+    display: none;
+  }
+}
+
+.test__check {
+  padding-left: 15px;
+}
+
+@media (max-width: 767px) {
+  .test__check {
+    padding: 0;
+  }
+}
+
+.test__canvas-check {
+  position: relative;
+}
+
+.test__canvas-check:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 15px;
+  background: #58a193;
+  border-radius: 10px 0px 0px 10px;
+}
+
+@media (max-width: 767px) {
+  .test__canvas-check:before {
+    display: none;
+  }
+}
+
+.check-form-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.1px;
+  color: #636464;
+  margin-bottom: 16px;
+}
+
+.test__form-options-check {
+  margin-bottom: 25px;
+}
+
+.answer-button-check {
+  margin-right: 0;
+  margin-bottom: 10px;
+  padding: 5px 29px;
+}
+
+.test__form-interact-check {
+  margin-bottom: 0;
 }
