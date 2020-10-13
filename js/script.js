@@ -68,17 +68,17 @@ $(document).ready(function () {
 		$('.test__board, .test__hint, .test__legend, .test__hint-aware-mobile').toggleClass('switch');
 	});
 
-		//popup-wrong & popup-right !!! Клики навесил просто для демонстрации, чтобы было ясно, что попап работает, меняйте как вам надо !!!
-		$('.answer-button-check').click(function (event) {
+		//popup-wrong & popup-right !!! Клики навесил просто для демонстрации, чтобы было ясно, что попап работает, удалите при релизе следующий код !!!
+		$('.check-form-title').click(function (event) {
 			$('.popup-wrong').addClass('open');
 			$('body').addClass('lock');
+		});
+		$('.popup__ok, .popup__close-area').click(function (event) {
+			$('.popup-wrong, .popup-right').removeClass('open');
+			$('body').removeClass('lock');
 		});
 		$('.test__form-option').click(function (event) {
 			$('.popup-right').addClass('open');
 			$('body').addClass('lock');
-		});
-		$('.popup__ok, .popup__close-area').click(function (event) {
-			$('.popup').removeClass('open');
-			$('body').removeClass('lock');
 		});
 });
