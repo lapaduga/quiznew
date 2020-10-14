@@ -68,17 +68,54 @@ $(document).ready(function () {
 		$('.test__board, .test__hint, .test__legend, .test__hint-aware-mobile').toggleClass('switch');
 	});
 
-		//popup-wrong & popup-right !!! Клики навесил просто для демонстрации, чтобы было ясно, что попап работает, удалите при релизе следующий код !!!
-		$('.check-form-title').click(function (event) {
-			$('.popup-wrong').addClass('open');
-			$('body').addClass('lock');
+	//popup-wrong & popup-right !!! Клики навесил просто для демонстрации, чтобы было ясно, что попап работает, удалите при релизе следующий код !!!
+	$('.check-form-title').click(function (event) {
+		$('.popup-wrong').addClass('open');
+		$('body').addClass('lock');
+	});
+	$('.popup__ok, .popup__close-area').click(function (event) {
+		$('.popup-wrong, .popup-right').removeClass('open');
+		$('body').removeClass('lock');
+	});
+	$('.test__form-option').click(function (event) {
+		$('.popup-right').addClass('open');
+		$('body').addClass('lock');
+	});
+
+	//result show-button
+	$('.show-button').click(function (event) {
+		let select = parseInt($('#select-answers').val());
+		$.each($('.shown-answer'), function (index, val) {
+			$(this).removeClass('reveal');
 		});
-		$('.popup__ok, .popup__close-area').click(function (event) {
-			$('.popup-wrong, .popup-right').removeClass('open');
-			$('body').removeClass('lock');
-		});
-		$('.test__form-option').click(function (event) {
-			$('.popup-right').addClass('open');
-			$('body').addClass('lock');
-		});
+		if (select === 1) {
+			$('.shown-answer-1').addClass('reveal');
+		} else if (select === 2) {
+			$('.shown-answer-2').addClass('reveal');
+		}
+		else if (select === 3) {
+			$('.shown-answer-3').addClass('reveal');
+		}
+		else if (select === 4) {
+			$('.shown-answer-4').addClass('reveal');
+		}
+		else if (select === 5) {
+			$('.shown-answer-5').addClass('reveal');
+		}
+		else if (select === 6) {
+			$('.shown-answer-6').addClass('reveal');
+		}
+		else if (select === 7) {
+			$('.shown-answer-7').addClass('reveal');
+		}
+		else if (select === 8) {
+			$('.shown-answer-8').addClass('reveal');
+		}
+		else if (select === 9) {
+			$('.shown-answer-9').addClass('reveal');
+		}
+		else if (select === 10) {
+			$('.shown-answer-10').addClass('reveal');
+		}
+	});
 });
