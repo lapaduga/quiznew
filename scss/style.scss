@@ -948,7 +948,7 @@ body {
 	}
 }
 .main__title-test {
-	@media (max-width: 767px){
+	@media (max-width: 767px) {
 		text-align: center;
 	}
 	@media (max-width: 400px) {
@@ -966,7 +966,7 @@ body {
 	@media (max-width: 992px) {
 		margin-bottom: 10px;
 	}
-	@media (max-width: 400px){
+	@media (max-width: 400px) {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -2471,8 +2471,6 @@ body {
 
 //about
 
-.about {
-}
 .about__main {
 	padding: 30px 0;
 }
@@ -2562,8 +2560,6 @@ body {
 .descriptor-free {
 	text-align: right;
 	font-size: 12px;
-}
-.about__directions {
 }
 .about__directions-title {
 	font-weight: 500;
@@ -2665,15 +2661,11 @@ body {
 
 //result
 
-.result {
-}
-.result__form {
-}
 .result__title-container {
 	display: flex;
 	align-items: center;
 	margin-bottom: 12px;
-	@media (max-width: 400px){
+	@media (max-width: 400px) {
 		justify-content: center;
 	}
 }
@@ -2684,13 +2676,13 @@ body {
 	letter-spacing: 0.1px;
 	color: #5e5c5c;
 	margin-right: 30px;
-	@media (max-width: 400px){
+	@media (max-width: 400px) {
 		margin-right: 0;
 		font-size: 24px;
 	}
 }
 .result__button-container {
-	@media (max-width: 400px){
+	@media (max-width: 400px) {
 		display: none;
 	}
 }
@@ -2707,7 +2699,7 @@ body {
 		color: #58a193;
 		background-color: transparent;
 	}
-	@media (max-width: 400px){
+	@media (max-width: 400px) {
 		padding: 6px 24px;
 	}
 }
@@ -2739,7 +2731,7 @@ body {
 		background-color: #e5e5e5;
 		animation: mask_left 3s steps(1, end) forwards;
 	}
-		&:after {
+	&:after {
 		content: "";
 		position: absolute;
 		top: 0;
@@ -2747,8 +2739,16 @@ body {
 		width: 50%;
 		height: 100%;
 		z-index: 3;
-		background-color: #58A193;
+		background-color: #58a193;
 		animation: mask_right 3s steps(1, end) forwards;
+	}
+}
+.bad-diagram{
+	&:after{
+		display: none;
+	}
+	&:before{
+		animation: none;
 	}
 }
 .result__diagram-line {
@@ -2766,7 +2766,13 @@ body {
 		left: 0;
 		width: 50%;
 		height: 100%;
-		background-color:#58A193;
+		background-color: #58a193;
+	}
+}
+.result__diagram-line-bad{
+	animation: line_bad 1.5s linear forwards;
+	&:after{
+		background: #F08A9A;
 	}
 }
 .result__diagram-body {
@@ -2785,14 +2791,18 @@ body {
 		font-size: 25px;
 		line-height: 21px;
 		letter-spacing: 0.1px;
-		color: #58A193;
+		color: #58a193;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		height: 65px;
 	}
 }
-.result__answers {
+.result__diagram-counter-bad{
+	animation: counter_bad 1.5s forwards;
+	span{
+		color: #F08A9A;
+	}
 }
 .result__wrong,
 .result__right {
@@ -2810,8 +2820,8 @@ body {
 .result__wrong {
 	margin-bottom: 20px;
 }
-.result__right{
-	span{
+.result__right {
+	span {
 		padding-left: 29px;
 	}
 }
@@ -2839,16 +2849,14 @@ body {
 	background: url("../img/module/select.svg") 98% 50% no-repeat;
 	margin-bottom: 12px;
 }
-.result__form-buttons {
-}
 .result__form-interact {
 	display: flex;
 	align-items: center;
 	margin-bottom: 30px;
-	@media (max-width: 767px){
+	@media (max-width: 767px) {
 		justify-content: center;
 	}
-	@media (max-width: 370px){
+	@media (max-width: 370px) {
 		flex-direction: column;
 	}
 }
@@ -2867,7 +2875,7 @@ body {
 		background: transparent;
 		color: #5e5c5c;
 	}
-	@media (max-width: 370px){
+	@media (max-width: 370px) {
 		margin: 0 0 15px 0;
 	}
 }
@@ -2886,8 +2894,6 @@ body {
 		background: #5790ad;
 		color: #fff;
 	}
-}
-.result__shown-answer {
 }
 .shown-answer-1,
 .shown-answer-2,
@@ -2911,9 +2917,9 @@ body {
 		display: block;
 	}
 }
-.result__button-mobile{
+.result__button-mobile {
 	display: none;
-	@media (max-width: 400px){
+	@media (max-width: 400px) {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -2928,11 +2934,25 @@ body {
 		transform: translate(0px, -6435px);
 	}
 }
+@keyframes counter_bad {
+	0% {
+	}
+	100% {
+		transform: translate(0px, -1235px);
+	}
+}
 @keyframes line {
 	0% {
 	}
 	100% {
 		transform: rotate(360deg);
+	}
+}
+@keyframes line_bad {
+	0% {
+	}
+	100% {
+		transform: rotate(72deg);
 	}
 }
 @keyframes mask_left {
@@ -2955,9 +2975,9 @@ body {
 }
 
 //test picture
-.shown-answer-image{
+.shown-answer-image {
 	padding: 20px;
-	img{
+	img {
 		max-width: 100%;
 	}
 }

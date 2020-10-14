@@ -3970,9 +3970,18 @@ body.lock {
   width: 50%;
   height: 100%;
   z-index: 3;
-  background-color: #58A193;
+  background-color: #58a193;
   -webkit-animation: mask_right 3s steps(1, end) forwards;
           animation: mask_right 3s steps(1, end) forwards;
+}
+
+.bad-diagram:after {
+  display: none;
+}
+
+.bad-diagram:before {
+  -webkit-animation: none;
+          animation: none;
 }
 
 .result__diagram-line {
@@ -3993,7 +4002,16 @@ body.lock {
   left: 0;
   width: 50%;
   height: 100%;
-  background-color: #58A193;
+  background-color: #58a193;
+}
+
+.result__diagram-line-bad {
+  -webkit-animation: line_bad 1.5s linear forwards;
+          animation: line_bad 1.5s linear forwards;
+}
+
+.result__diagram-line-bad:after {
+  background: #F08A9A;
 }
 
 .result__diagram-body {
@@ -4016,7 +4034,7 @@ body.lock {
   font-size: 25px;
   line-height: 21px;
   letter-spacing: 0.1px;
-  color: #58A193;
+  color: #58a193;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4027,6 +4045,15 @@ body.lock {
       -ms-flex-pack: center;
           justify-content: center;
   height: 65px;
+}
+
+.result__diagram-counter-bad {
+  -webkit-animation: counter_bad 1.5s forwards;
+          animation: counter_bad 1.5s forwards;
+}
+
+.result__diagram-counter-bad span {
+  color: #F08A9A;
 }
 
 .result__wrong,
@@ -4221,6 +4248,24 @@ body.lock {
   }
 }
 
+@-webkit-keyframes counter_bad {
+  0% {
+  }
+  100% {
+    -webkit-transform: translate(0px, -1235px);
+            transform: translate(0px, -1235px);
+  }
+}
+
+@keyframes counter_bad {
+  0% {
+  }
+  100% {
+    -webkit-transform: translate(0px, -1235px);
+            transform: translate(0px, -1235px);
+  }
+}
+
 @-webkit-keyframes line {
   0% {
   }
@@ -4236,6 +4281,24 @@ body.lock {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes line_bad {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotate(72deg);
+            transform: rotate(72deg);
+  }
+}
+
+@keyframes line_bad {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotate(72deg);
+            transform: rotate(72deg);
   }
 }
 
