@@ -2684,6 +2684,10 @@ body {
 	letter-spacing: 0.1px;
 	color: #5e5c5c;
 	margin-right: 30px;
+	@media (max-width: 400px){
+		margin-right: 0;
+		font-size: 24px;
+	}
 }
 .result__button-container {
 	@media (max-width: 400px){
@@ -2841,6 +2845,12 @@ body {
 	display: flex;
 	align-items: center;
 	margin-bottom: 30px;
+	@media (max-width: 767px){
+		justify-content: center;
+	}
+	@media (max-width: 370px){
+		flex-direction: column;
+	}
 }
 .to-module-button {
 	font-size: 14px;
@@ -2856,6 +2866,9 @@ body {
 	&:hover {
 		background: transparent;
 		color: #5e5c5c;
+	}
+	@media (max-width: 370px){
+		margin: 0 0 15px 0;
 	}
 }
 .show-button {
@@ -2899,6 +2912,7 @@ body {
 	}
 }
 .result__button-mobile{
+	display: none;
 	@media (max-width: 400px){
 		display: flex;
 		align-items: center;
