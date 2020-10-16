@@ -118,4 +118,18 @@ $(document).ready(function () {
 			$('.shown-answer-10').addClass('reveal');
 		}
 	});
+
+		//reaction radiobuttons
+		$.each($('.test__form-radiobutton'), function (index, val) {
+			if ($(this).find('input').prop('checked') == true) {
+				$(this).addClass('active');
+			}
+		});
+		$(document).on('click', '.test__form-radiobutton', function (event) {
+			$(this).parents('.test__form-options').find('.test__form-radiobutton').removeClass('active');
+			$(this).parents('.test__form-options').find('.test__form-radiobutton input').prop('checked', false);
+			$(this).toggleClass('active');
+			$(this).find('input').prop('checked', true);
+			return false;
+		});
 });

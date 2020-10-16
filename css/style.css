@@ -2434,6 +2434,59 @@ body.lock {
   margin-bottom: 16px;
 }
 
+.test__form-radiobutton {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: #5e5c5c;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  padding-left: 34px;
+  position: relative;
+}
+
+.test__form-radiobutton input {
+  display: none;
+}
+
+.test__form-radiobutton:before {
+  content: "";
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  border: 2px solid #5d5c5c;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.test__form-radiobutton:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 4px;
+  top: 4px;
+}
+
+.test__form-radiobutton.active:after {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #5d5c5c;
+}
+
+@media (max-width: 550px) {
+  .test__form-radiobutton {
+    padding-left: 25px;
+  }
+}
+
 .footer {
   height: 58px;
   margin-left: 210px;
